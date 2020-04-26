@@ -1,0 +1,15 @@
+[package]
+name = "get-started-yew"
+version = "0.0.0"
+authors = ["nju33 <nju33.ki@gmail.com>"]
+edition = "2018"
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+wasm-bindgen = { version = "0.2.60", features = ["serde-serialize"]  }
+yew = { version = "0.14", features = ["web_sys"] }
+
+[profile.release]
+opt-level = "s"
